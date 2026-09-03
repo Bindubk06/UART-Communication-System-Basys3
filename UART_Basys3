@@ -1,0 +1,41 @@
+## Clock
+set_property -dict { PACKAGE_PIN W5 IOSTANDARD LVCMOS33 } [get_ports { clk }]
+create_clock -period 10.000 -name sys_clk [get_ports { clk }]
+
+## Reset - BTNU
+set_property -dict { PACKAGE_PIN U18 IOSTANDARD LVCMOS33 } [get_ports { reset }]
+
+## TX DATA - SW0 to SW7
+set_property -dict { PACKAGE_PIN V17 IOSTANDARD LVCMOS33 } [get_ports { tx_data[0] }]
+set_property -dict { PACKAGE_PIN V16 IOSTANDARD LVCMOS33 } [get_ports { tx_data[1] }]
+set_property -dict { PACKAGE_PIN W16 IOSTANDARD LVCMOS33 } [get_ports { tx_data[2] }]
+set_property -dict { PACKAGE_PIN W17 IOSTANDARD LVCMOS33 } [get_ports { tx_data[3] }]
+set_property -dict { PACKAGE_PIN W15 IOSTANDARD LVCMOS33 } [get_ports { tx_data[4] }]
+set_property -dict { PACKAGE_PIN V15 IOSTANDARD LVCMOS33 } [get_ports { tx_data[5] }]
+set_property -dict { PACKAGE_PIN W14 IOSTANDARD LVCMOS33 } [get_ports { tx_data[6] }]
+set_property -dict { PACKAGE_PIN W13 IOSTANDARD LVCMOS33 } [get_ports { tx_data[7] }]
+
+## TX START - BTNC
+set_property -dict { PACKAGE_PIN T18 IOSTANDARD LVCMOS33 } [get_ports { tx_start }]
+
+## RX - Basys 3 USB-UART
+set_property -dict { PACKAGE_PIN A18 IOSTANDARD LVCMOS33 } [get_ports { rx }]
+
+## TX - Basys 3 USB-UART
+set_property -dict { PACKAGE_PIN B18 IOSTANDARD LVCMOS33 } [get_ports { tx }]
+
+## TX BUSY - LED8
+set_property -dict { PACKAGE_PIN V13 IOSTANDARD LVCMOS33 } [get_ports { tx_busy }]
+
+## RX DATA - LED0 to LED7
+set_property -dict { PACKAGE_PIN U16 IOSTANDARD LVCMOS33 } [get_ports { rx_data[0] }]
+set_property -dict { PACKAGE_PIN E19 IOSTANDARD LVCMOS33 } [get_ports { rx_data[1] }]
+set_property -dict { PACKAGE_PIN U19 IOSTANDARD LVCMOS33 } [get_ports { rx_data[2] }]
+set_property -dict { PACKAGE_PIN V19 IOSTANDARD LVCMOS33 } [get_ports { rx_data[3] }]
+set_property -dict { PACKAGE_PIN W18 IOSTANDARD LVCMOS33 } [get_ports { rx_data[4] }]
+set_property -dict { PACKAGE_PIN U15 IOSTANDARD LVCMOS33 } [get_ports { rx_data[5] }]
+set_property -dict { PACKAGE_PIN U14 IOSTANDARD LVCMOS33 } [get_ports { rx_data[6] }]
+set_property -dict { PACKAGE_PIN V14 IOSTANDARD LVCMOS33 } [get_ports { rx_data[7] }]
+
+## RX VALID - LED9
+set_property -dict { PACKAGE_PIN V3 IOSTANDARD LVCMOS33 } [get_ports { rx_valid }]
